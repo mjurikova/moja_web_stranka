@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+    :root{
+        --brown: rgba(150, 140, 131, 1);
+        --cream: rgba(246, 245, 242, 1);
+        --vanila:rgba(240, 235, 227, 1) ;
+        --pink: rgba(255, 239, 239, 1);
+        --dark-pink: rgba(247, 218, 217, 1) ;
+        --white: rgba(255, 255, 255, 1);
+        --black: rgba(0, 0, 0, 1);
+        --piiink: rgba(247, 218, 217, 1)
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background-color: var(--white) ;
+        height: 100%;                 
+    }
+
+    .container{
+        min-height: 100vh;        /* výška celej obrazovky */
+        display: flex;
+        flex-direction: column;   /* aby footer išiel pod main */
+    }
+
+    header{
+        background-color:var(--cream);
+        border-top: 2px solid var(--brown);
+        border-bottom: 2px solid var(--brown); 
+    }
+
+    .menu-toggle {
+        font-size: 30px;
+        padding: 10px;
+        cursor: pointer;
+        text-align: right;
+        color:  var(--brown);
+    }
+
+
+
+    .menu-close {
+        font-size: 30px;
+        color: var(--brown);
+            margin-right: -250px;
+            cursor: pointer;
+    }
+
+    nav {
+        position:fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom right, white, pink);
+        padding: 2em;
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        z-index: 1000;
+    }
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 2em;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+    }
+    nav ul li {
+        margin: 1.2em 0;
+        font-size: 1.4em;
+    }
+    nav a {
+        text-decoration: none;
+        color: var(--brown);
+    }
+    nav.show {
+        display: flex;
+    }
+
+
+    main {
+        padding: 50px 0px 60px;
+        background-color: #fff;
+
+        flex: 1; 
+    }
+
+    footer {
+        background-color: var(--cream);
+        text-align: center;
+        border-top: 2px solid var(--brown);
+        border-bottom: 2px solid var(--brown);
+        padding: 18px;  
+        bottom: 0;
+        width: 100%;   
+    }
+
+    .footer-icons {
+        display: flex;
+        justify-content: center;
+        gap: 40px;   
+    }
+
+    .icon1 {
+        width: 70px;
+        height: 40px;
+    }
+
+    .icon2 {
+        width: 40px;
+        height: 40px;
+    }
+
+    .icon3 {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .footer-copyright {
+        font-family: "Open Sans", sans-serif;
+        color:var(--brown);
+        font-size: 18px; 
+        margin-bottom: 5px;  
+    
+    }
+
+
+    .nadpis {
+        font-family: "Montserrat", sans-serif;
+        font-size: 60px;
+        color: var(--brown);
+        background-color: var(--pink);
+        padding: 15px;
+        text-align: left;
+        width: 350px;
+        margin-top: 10px;
+    }
+
+    .podnadpis{
+        text-align: left;
+        font-family: "Montserrat", sans-serif;;
+        font-size: 30px;
+    }
+
+    .text{
+        text-align: left;
+        font-family: "Open Sans", sans-serif;
+        font-size: 25px;
+        word-spacing: 3px;
+        line-height: 35px;
+        margin-bottom: 80px;
+    }
+
+
+    .loga{
+        width: 300px;
+        height: 300px;
+    }
+
+
+    .home-photo{
+        width: 180px;
+        height: 260px;
+        margin: 20px 0;
+        position: relative;
+        box-shadow: 40px 40px 0px 0px var(--dark-pink);
+    }
+        
+
+    .obsah-home{
+        background: var(--vanila);
+        margin: 20px;
+        width: 350px;
+        height: 250px;
+        margin-top: 200px;
+        margin-bottom: 50px; 
+    }
+
+    .name{
+        font-size: 35px;
+        margin-bottom: -40px;
+        font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+        
+    }
+    .surname{
+        font-size: 35px;
+        margin-top: 35px;
+        font-weight: 600;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .home_name{
+        margin-top: -120px;
+    }
+
+    .home_text{
+        font-size: 15px;
+        margin-top: -10px;
+        word-spacing: 3px;
+        line-height: 20px;
+        font-family: "Open Sans", sans-serif;
+        letter-spacing: 1px;
+    
+    }
+
+    .contact-btn {
+        background:var(--brown);
+        color: white;
+        border: none;
+        padding: 13px 45px;
+        margin: 70px;
+        margin-top: 50px;
+        font-size: 16px;
+        border-radius: 25px;
+        cursor: pointer;
+        text-decoration: none;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+
+    .contact-btn:hover {
+        background-color:var(--dark-pink) ;
+    }
+
+    .contact-form {
+        background-color: #f9e8e8;
+        padding: 40px;
+        width: 250px;
+        height: 510px;
+        margin: 0 auto;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 60px;
+        margin-top: 60px;
+    }
+    .form-title {
+        font-size: 65px;
+        font-weight: bold;
+        margin-top: -5px;
+        margin-bottom: 40px;
+        color: var(--brown);
+        font-family: "Montserrat", sans-serif;
+    }
+    .input-field {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        background-color: white;
+        outline: none;
+        font-family: "Open Sans", sans-serif;
+    }
+    .textarea {
+        height: 100px;
+        resize: none;
+    }
+    .submit-btn {
+        padding: 10px 40px;
+        background-color: var(--brown);
+        color: white;
+        border-radius: 20px;
+        margin-top: 10px;
+        border: none;
+        cursor: pointer;
+        font-family: "Montserrat", sans-serif;
+    }
+
+
+    .myproject{
+        font-size: 50px;
+        color: var(--brown);
+        background-color: var(--pink);
+        padding: 15px;
+        text-align: left;
+        width: 350px;
+        margin-left: 30px;
+        margin-top: 0px;
+        margin-bottom: 60px;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .img-project{
+        width: 300px;
+        transition: transform 0.5s ease;
+        margin: 20px;
+        box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
+    }
+    .img-project:hover{
+        transform: scale(1.1);
+    }
+
+    .aboutme{
+        margin-left: 30px;
+        margin-right: 60px;
+    }
+
+    form{
+        width: 780px;
+    }
+
+    
+    /* PC */
+@media (min-width: 1025px) {
+    nav {
+        position: static;
+        display: block !important;
+        background: none;
+        height: auto;
+        padding: 0;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 0;
+        font-size: 20px;
+    }
+
+    /*Skrytý hamburger PC */
+    .menu-toggle {
+        display: none;
+    }
+
+    header{
+        padding: 30px;   
+    }
+
+    nav ul{ 
+        justify-content: right;
+        padding: 0px 40px;
+        gap: 60px;
+    }
+
+
+    .nadpis{
+        width: 500px;
+        font-size: 80px;
+        margin: 30px;
+    }
+    .podnadpis{
+        font-size: 35px;
+        margin: 30px;
+    }
+    .text{
+        font-size: 25px;
+        width: 900px;
+        margin-left: 30px;
+        margin-top: -20px;
+        margin-bottom: 80px;
+    }
+
+ 
+
+    .image{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
+    .home-photo{
+        width: 380px;
+        height: 460px;
+        margin: 20px 0;
+        position: relative;
+        margin-top: 50px;
+        margin-left: 80px;
+        box-shadow: 40px 40px 0px 0px var(--dark-pink);
+    }
+
+    .obsah-home{
+        background: var(--vanila);
+        width: 500px;
+        height: 350px;  
+    }
+
+
+    .name{
+        font-size: 60px;
+    }
+    .surname{
+        font-size: 60px;
+        margin-bottom: 25px;
+    }
+    .home_text{
+        line-height: 28px;
+        font-size: 20px;
+        letter-spacing: 1.5px;
+    }
+
+    .contact-form {
+        background-color: #f9e8e8;
+        padding: 40px;
+        width: 800px;
+        height: 540px;
+        margin: 0 auto; /* zarovná na stred */
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        margin-bottom: 60px;
+        margin-top: 60px;
+    }
+    .form-title {
+        font-size: 90px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: var(--brown);
+    }
+    .input-field {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        background-color: white;
+        outline: none;
+        
+    }
+    .textarea {
+        height: 100px;
+        resize: none;
+    }
+    .submit-btn {
+        padding: 10px 40px;
+        background-color: var(--brown);
+        color: white;
+        border-radius: 20px;
+        border: none;
+        cursor: pointer; 
+    }
+
+    .spolu{
+        display: flex   ;
+    }
+    .loga{
+        width: 500px;
+        height: 500px;
+        margin-top: 250px;
+        margin-left: 200px;
+    }
+
+    .myproject{
+        margin: auto;
+        font-size: 80px;
+        width: 550px;
+        margin-bottom: 100px;
+    }
+
+    .menu-close {
+        display: none !important;
+    }
+
+    }
+
