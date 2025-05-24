@@ -57,6 +57,7 @@
             cursor: pointer;
     }
 
+
     nav {
         position:fixed;
         top: 0;
@@ -74,12 +75,14 @@
         list-style: none;
         padding: 0;
         margin-top: 2em;
+        margin-right: 80px;
         font-family: "Montserrat", sans-serif;
         font-weight: 700;
     }
     nav ul li {
         margin: 1.2em 0;
         font-size: 1.4em;
+  
     }
     nav a {
         text-decoration: none;
