@@ -9,28 +9,28 @@
     
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-                <nav id="main-nav">
-                     <div class="menu-close">✖</div>
-                    <ul>
-                        <li><a href="index.html">Domov</a></li>    
-                        <li><a href="omne.HTML">O mne</a> </li> 
-                        <li> <a href="práce.html">Práce</a> </li> 
-                        <li> <a href="kontakt.html">Kontakt</a> </li>
+     <div class="page">
+        <header class="header">
+           <div class="header__menu-toggle" onclick="toggleMenu()">☰</div>
+                <nav class="header__nav" id="main-nav">
+            <div class="header__menu-close">✖</div>
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item"><a class="header__nav-link" href="index.html">Domov</a></li>    
+                        <li class="header__nav-item"><a class="header__nav-link" href="omne.HTML">O mne</a> </li> 
+                        <li class="header__nav-item"> <a class="header__nav-link" href="práce.html">Práce</a> </li> 
+                        <li class="header__nav-item"> <a class="header__nav-link" href="kontakt.html">Kontakt</a> </li>
                     </ul>
-                </nav>
-               
+                </nav>              
         </header>
 
             
-            <main>       
-                <div class="spolu"     >
-                <section class="aboutme">
-                  <h1 class="nadpis"> ABOUT ME </h1>
-                    <h2 class="podnadpis"> Adobe Photoshop:</h2>
-                        <p class="text">
+        <main class="main">       
+            <div class="about">
+                <section class="about__section">
+                <h1 class="about__title"> ABOUT ME </h1>
+
+                    <h2 class="about__subtitle"> Adobe Photoshop:</h2>
+                        <p class="about__text">
                         Mám rozsiahle skúsenosti s úpravou obrázkov, 
                         retušovaním, vytváraním  dizajnov. Pracovala som
                         s pokročilými nástrojmi na prácu s vrstvami, maskami 
@@ -38,59 +38,52 @@
                         výsledky v oblasti grafiky a digitálneho umenia.
                         </p>
 
-                        <h2 class="podnadpis"> Adobe Animate:</h2>
-                        <p class="text">
+                        <h2 class="about__subtitle"> Adobe Animate:</h2>
+                        <p class="about__text">
                         Používam na tvorbu animácií a interaktívnych prvkov pre webové stránky,  reklamy a animované videá. Ovládam prácu s časovými osami, vytváranie  animácií  a interaktívnych obsahov,  ktoré oživia vizuálnu komunikáciu.
                         </p>    
 
-                        <h2 class="podnadpis"> Adobe Illustrator: </h2>
-                        <p class="text">
-                            Navrhujem vektorovú grafiku, logá, ikony a ilustrácie. Navrhujem vektorovú grafiku, logá, ikony a ilustrácie. Moje skúsenosti zahŕňajú prácu s nástrojmi na kreslenie, vytvárať kvalitný dizajn s dôrazom na detail a vektorovú presnosť.
+                        <h2 class="about__subtitle"> Adobe Illustrator: </h2>
+                        <p class="about__text">
+                        Navrhujem vektorovú grafiku, logá, ikony a ilustrácie. Navrhujem vektorovú grafiku, logá, ikony a ilustrácie. Moje skúsenosti zahŕňajú prácu s nástrojmi na kreslenie, vytvárať kvalitný dizajn s dôrazom na detail a vektorovú presnosť.
                         </p>
-
-
-
-
-
                 </section>
 
-                    <img class="loga" src="assets/images/MIX.png" >
+                <div class="about__image-wrapper"></div>
+                    <img class="about__image" src="assets/images/MIX.png" >
                 </div>
-            </main>
-            
-            
-                   
-            <footer>
-                <div class="footer-icons">
-                    <a href="https://www.instagram.com/m.jurikova/" target="_blank">
-                        <img class="icon1" src="assets/images/insta-icon.png" alt="Instagram">
-                    </a>
-                    <a href="mailto:m.jurikova7520008@gmail.com">
-                        <img class="icon2" src="assets/images/gmail-icon.png" alt="Gmail">
-                    </a>
-                    <a href="tel:+421919263665">
-                        <img class="icon3" src="assets/images/phone-icon.jpg" alt="Telefon">
-                    </a>
-                </div>
-                <p class="footer-copyright">Copyright © by Michaela</p>
-            </footer>
-
-       
+            </div>
+        </main>
+                  
+        <footer class="footer">
+            <div class="footer__icons">
+                <a class="footer__icon-link" href="https://www.instagram.com/m.jurikova/" target="_blank">
+                <img class="footer__icon1" src="assets/images/insta-icon.png" alt="Instagram">
+                </a>
+                <a class="footer__icon-link" href="mailto:m.jurikova7520008@gmail.com">
+                <img class="footer__icon2" src="assets/images/gmail-icon.png" alt="Gmail">
+                </a>
+                <a class="footer__icon-link" href="tel:+421919263665">
+                <img class="footer__icon3" src="assets/images/phone-icon.jpg" alt="Telefon">
+                </a>
+            </div>
+                <p class="footer__copyright">Copyright © by Michaela</p>
+        </footer>
     </div>
+
     <script>
         function toggleMenu() {
             const nav = document.getElementById("main-nav");
             nav.classList.toggle("show");
-           }
+        }
+      document.querySelector(".header__menu-toggle").addEventListener("click", function() {
+    document.querySelector(".header__nav").classList.add("show");
+});
 
-                document.querySelector(".menu-toggle").addEventListener("click", () => {
-    document.getElementById("main-nav").classList.add("show");
-  });
+document.querySelector(".header__menu-close").addEventListener("click", function() {
+    document.querySelector(".header__nav").classList.remove("show");
+});
 
-  document.querySelector(".menu-close").addEventListener("click", () => {
-    document.getElementById("main-nav").classList.remove("show");
-  });
-
-        </script>
+    </script>
 </body>
 </html>

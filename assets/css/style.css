@@ -17,7 +17,7 @@
         --dark-pink: rgba(247, 218, 217, 1) ;
         --white: rgba(255, 255, 255, 1);
         --black: rgba(0, 0, 0, 1);
-        --piiink: rgba(247, 218, 217, 1)
+        
     }
 
     body {
@@ -28,19 +28,19 @@
         height: 100%;                 
     }
 
-    .container{
+    .page{
         min-height: 100vh;        /* výška celej obrazovky */
         display: flex;
         flex-direction: column;   /* aby footer išiel pod main */
     }
 
-    header{
+    .header{
         background-color:var(--cream);
         border-top: 2px solid var(--brown);
         border-bottom: 2px solid var(--brown); 
     }
 
-    .menu-toggle {
+    .header__menu-toggle {
         font-size: 30px;
         padding: 10px;
         cursor: pointer;
@@ -50,15 +50,16 @@
 
 
 
-    .menu-close {
-        font-size: 30px;
-        color: var(--brown);
-            margin-right: -250px;
-            cursor: pointer;
-    }
+
+.header__menu-close {
+    font-size: 2rem;
+    color: var(--brown);
+    cursor: pointer;
+     margin-right: -250px;
+}
 
 
-    nav {
+    .header__nav {
         position:fixed;
         top: 0;
         left: 0;
@@ -71,7 +72,7 @@
         justify-content: flex-start;
         z-index: 1000;
     }
-    nav ul {
+    .header__nav-list {
         list-style: none;
         padding: 0;
         margin-top: 2em;
@@ -79,28 +80,30 @@
         font-family: "Montserrat", sans-serif;
         font-weight: 700;
     }
-    nav ul li {
+    .header__nav-item {
         margin: 1.2em 0;
         font-size: 1.4em;
 
     }
-    nav a {
+    .header__nav-link {
         text-decoration: none;
         color: var(--brown);
     }
-    nav.show {
-        display: flex;
-    }
 
 
-    main {
+.header__nav.show {
+    display: flex; /* Zobrazí sa, keď klikneš na hamburger */
+}
+
+
+    .main {
         padding: 50px 0px 60px;
         background-color: #fff;
 
         flex: 1; 
     }
 
-    footer {
+    .footer {
         background-color: var(--cream);
         text-align: center;
         border-top: 2px solid var(--brown);
@@ -110,29 +113,29 @@
         width: 100%;   
     }
 
-    .footer-icons {
+    .footer__icons {
         display: flex;
         justify-content: center;
         gap: 40px;   
     }
 
-    .icon1 {
+    .footer__icon1 {
         width: 70px;
         height: 40px;
     }
 
-    .icon2 {
+    .footer__icon2 {
         width: 40px;
         height: 40px;
     }
 
-    .icon3 {
+    .footer__icon3 {
         width: 40px;
         height: 40px;
     }
 
 
-    .footer-copyright {
+    .footer__copyright {
         font-family: "Open Sans", sans-serif;
         color:var(--brown);
         font-size: 18px; 
@@ -141,7 +144,7 @@
     }
 
 
-    .nadpis {
+    .about__title {
         font-family: "Montserrat", sans-serif;
         font-size: 53px;
         color: var(--brown);
@@ -152,13 +155,13 @@
         margin-top: 10px;
     }
 
-    .podnadpis{
+    .about__subtitle{
         text-align: left;
         font-family: "Montserrat", sans-serif;;
         font-size: 30px;
     }
 
-    .text{
+    .about__text{
         text-align: left;
         font-family: "Open Sans", sans-serif;
         font-size: 25px;
@@ -168,13 +171,13 @@
     }
 
 
-    .loga{
+    .about__image{
         width: 300px;
         height: 300px;
     }
 
 
-    .home-photo{
+    .home__photo{
         width: 180px;
         height: 260px;
         margin: 20px 0;
@@ -183,7 +186,7 @@
     }
         
 
-    .obsah-home{
+    .home__content{
         background: var(--vanila);
         margin: 20px;
         width: 350px;
@@ -192,7 +195,7 @@
         margin-bottom: 50px; 
     }
 
-    .name{
+    .home__name{
         font-size: 35px;
         margin-bottom: -40px;
         font-family: "Montserrat", sans-serif;
@@ -200,18 +203,18 @@
     font-style: normal;
         
     }
-    .surname{
+    .home__surname{
         font-size: 35px;
         margin-top: 35px;
         font-weight: 600;
         font-family: "Montserrat", sans-serif;
     }
 
-    .home_name{
+    .home__name-wrapper{
         margin-top: -120px;
     }
 
-    .home_text{
+    .home__text{
         font-size: 15px;
         margin-top: -10px;
         word-spacing: 3px;
@@ -221,7 +224,7 @@
     
     }
 
-    .contact-btn {
+   .home__contact-btn{
         background:var(--brown);
         color: white;
         border: none;
@@ -238,11 +241,11 @@
     }
 
 
-    .contact-btn:hover {
+    .home__contact-btn:hover {
         background-color:var(--dark-pink) ;
     }
 
-    .contact-form {
+    .contact {
         background-color: #f9e8e8;
         padding: 40px;
         width: 250px;
@@ -253,7 +256,7 @@
         margin-bottom: 60px;
         margin-top: 60px;
     }
-    .form-title {
+    .contact__title {
         font-size: 50px;
         font-weight: bold;
         margin-top: -5px;
@@ -261,7 +264,7 @@
         color: var(--brown);
         font-family: "Montserrat", sans-serif;
     }
-    .input-field {
+    .contact__input {
         width: 100%;
         padding: 10px;
         margin-bottom: 15px;
@@ -270,11 +273,11 @@
         outline: none;
         font-family: "Open Sans", sans-serif;
     }
-    .textarea {
+    .contact__textarea {
         height: 100px;
         resize: none;
     }
-    .submit-btn {
+    .contact__submit {
         padding: 10px 40px;
         background-color: var(--brown);
         color: white;
@@ -286,7 +289,7 @@
     }
 
 
-    .myproject{
+    .projects__title{
         font-size: 44px;
         color: var(--brown);
         background-color: var(--pink);
@@ -299,17 +302,18 @@
         font-family: "Montserrat", sans-serif;
     }
 
-    .img-project{
+    .projects__image{
         width: 300px;
         transition: transform 0.5s ease;
         margin: 20px;
         box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3);
     }
-    .img-project:hover{
+    .projects__image:hover{
         transform: scale(1.1);
     }
 
-    .aboutme{
+
+    .about__section{
         margin-left: 30px;
         margin-right: 60px;
     }
@@ -318,7 +322,7 @@
     
     /* PC */
 @media (min-width: 1025px) {
-    nav {
+    .header__nav {
         position: static;
         display: block !important;
         background: none;
@@ -326,7 +330,7 @@
         padding: 0;
     }
 
-    nav ul {
+    .header__nav-list {
         display: flex;
         margin: 0;
         justify-content: right;
@@ -334,31 +338,30 @@
         gap: 60px;
     }
 
-    nav ul li {
+    .header__nav-item {
         margin: 0;
         font-size: 20px;
     }
 
     /*Skrytý hamburger PC */
-    .menu-toggle {
+    .header__menu-toggle {
         display: none;
     }
-
-    header{
+    .header{
         padding: 30px;   
     }
 
   
-    .nadpis{
+    .about__title{
         width: 500px;
         font-size: 80px;
         margin: 30px;
     }
-    .podnadpis{
+    .about__subtitle{
         font-size: 35px;
         margin: 30px;
     }
-    .text{
+    .about__text{
         font-size: 25px;
         width: 900px;
         margin-left: 30px;
@@ -368,13 +371,12 @@
 
  
 
-    .image{
+    .home{
         display: flex;
         flex-direction: row-reverse;
         justify-content: center;
     }
-
-    .home-photo{
+    .home__photo{
         width: 380px;
         height: 460px;
         margin: 20px 0;
@@ -383,28 +385,26 @@
         margin-left: 80px;
         box-shadow: 40px 40px 0px 0px var(--dark-pink);
     }
-
-    .obsah-home{
+    .home__content{
         background: var(--vanila);
         width: 500px;
         height: 350px;  
     }
-
-
-    .name{
+    .home__name{
         font-size: 60px;
     }
-    .surname{
+    .home__surname{
         font-size: 60px;
         margin-bottom: 25px;
     }
-    .home_text{
+    .home__text{
         line-height: 28px;
         font-size: 20px;
         letter-spacing: 1.5px;
     }
 
-    .contact-form {
+
+    .contact {
         background-color: #f9e8e8;
         padding: 40px;
         width: 800px;
@@ -415,13 +415,13 @@
         margin-bottom: 60px;
         margin-top: 60px;
     }
-    .form-title {
+    .contact__title {
         font-size: 90px;
         font-weight: bold;
         margin-bottom: 20px;
         color: var(--brown);
     }
-    .input-field {
+    .contact__input {
         width: 100%;
         padding: 10px;
         margin-bottom: 15px;
@@ -430,11 +430,11 @@
         outline: none;
         
     }
-    .textarea {
+    textarea{
         height: 100px;
         resize: none;
     }
-    .submit-btn {
+    .contact__submit {
         padding: 10px 40px;
         background-color: var(--brown);
         color: white;
@@ -443,24 +443,25 @@
         cursor: pointer; 
     }
 
-    .spolu{
+    .about{
         display: flex   ;
     }
-    .loga{
+    .about__image{
         width: 500px;
         height: 500px;
         margin-top: 250px;
         margin-left: 200px;
     }
 
-    .myproject{
+    .projects__title{
         margin: auto;
         font-size: 80px;
         width: 550px;
         margin-bottom: 100px;
     }
 
-    .menu-close {
+    
+    .header__menu-close {
         display: none !important;
     }
 
