@@ -251,7 +251,7 @@
         margin-top: 60px;
     }
     .form-title {
-        font-size: 65px;
+        font-size: 50px;
         font-weight: bold;
         margin-top: -5px;
         margin-bottom: 40px;
@@ -284,7 +284,7 @@
 
 
     .myproject{
-        font-size: 50px;
+        font-size: 44px;
         color: var(--brown);
         background-color: var(--pink);
         padding: 15px;
@@ -311,10 +311,7 @@
         margin-right: 60px;
     }
 
-    form{
-        width: 780px;
-    }
-
+  
     
     /* PC */
 @media (min-width: 1025px) {
