@@ -23,22 +23,22 @@
                 </nav>              
         </header>
        
-            <main class="main">
-                <div class="contact">
-                    <h1 class="contact__title">CONTACT</h1>
-                    <form class="contact__form"></form>
-                    <input type="text" placeholder="Enter your name" class="contact__input">
-                    <input type="text" placeholder="Enter your surname" class="contact__input">
-                    <input type="text" placeholder="E-mail" class="contact__input">
-                    <input type="text" placeholder="Telephone" class="contact__input">
-                    <textarea placeholder="Message..." class="contact__input textarea"></textarea> 
-                    <button type="submit" class="contact__submit">Submit</button>
+        <main class="main">
+            <div class="contact">
+                <h1 class="contact__title">CONTACT</h1>
+                    <form class="contact__form">
+                        <input type="text" placeholder="Enter your name" class="contact__input">
+                        <input type="text" placeholder="Enter your surname" class="contact__input">
+                        <input type="text" placeholder="E-mail" class="contact__input">
+                        <input type="text" placeholder="Telephone" class="contact__input">
+                        <textarea placeholder="Message..." class="contact__input textarea"></textarea> 
+                        <button type="submit" class="contact__submit">Submit</button>
                     </form>
-                    </div>
-            </main>
+            </div>
+        </main>
 
             
-<footer class="footer">
+        <footer class="footer">
             <div class="footer__icons">
                 <a class="footer__icon-link" href="https://www.instagram.com/m.jurikova/" target="_blank">
                 <img class="footer__icon1" src="assets/images/insta-icon.png" alt="Instagram">
@@ -59,14 +59,13 @@
             const nav = document.getElementById("main-nav");
             nav.classList.toggle("show");
         }
-    document.querySelector(".header__menu-toggle").addEventListener("click", function() {
-    document.querySelector(".header__nav").classList.add("show");
-});
+            document.querySelector(".header__menu-toggle").addEventListener("click", function() {
+            document.querySelector(".header__nav").classList.add("show");
+        });
 
-document.querySelector(".header__menu-close").addEventListener("click", function() {
-    document.querySelector(".header__nav").classList.remove("show");
-});
-
+        document.querySelector(".header__menu-close").addEventListener("click", function() {
+            document.querySelector(".header__nav").classList.remove("show");
+        });
     </script>
 </body>
 </html>
