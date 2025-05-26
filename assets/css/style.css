@@ -290,7 +290,7 @@
 
 
     .projects__title{
-        font-size: 44px;
+        font-size: 40px;
         color: var(--brown);
         background-color: var(--pink);
         padding: 15px;
@@ -449,13 +449,13 @@
     .about__image{
         width: 500px;
         height: 500px;
-        margin-top: 250px;
+        margin-top: 370px;
         margin-left: 200px;
     }
 
     .projects__title{
         margin: auto;
-        font-size: 80px;
+        font-size: 74px;
         width: 550px;
         margin-bottom: 100px;
     }
