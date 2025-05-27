@@ -106,14 +106,15 @@
         display: flex;
         justify-content: center;
         gap: 40px;   
+      
     }
     .footer__icon1 {
-        width: 70px;
+        width: 50px;
         height: 40px;
     }
     .footer__icon2 {
         width: 40px;
-        height: 40px;
+        height: 35px;
     }
     .footer__icon3 {
         width: 40px;
